@@ -1,0 +1,7 @@
+# AI エージェント用ファイル — public リポジトリのため公開しない
+CLAUDE.md
+AGENTS.md
+.claude/
+
+# macOS
+.DS_Store

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>プライバシーポリシー — WOD Logger</title>
+    <style>
+        :root {
+            --bg: #fbfbf9;
+            --surface: #ffffff;
+            --ink: #1a1a1e;
+            --ink-soft: #54545c;
+            --line: #e6e5e0;
+            --accent: #1f7a54;
+            --accent-soft: #e7f2ec;
+            --code: #f2f1ec;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f11;
+                --surface: #17171a;
+                --ink: #ececef;
+                --ink-soft: #a2a2ac;
+                --line: #2a2a2f;
+                --accent: #54c98d;
+                --accent-soft: #16241d;
+                --code: #1e1e22;
+            }
+        }
+
+        :root[data-theme="light"] {
+            --bg: #fbfbf9;
+            --surface: #ffffff;
+            --ink: #1a1a1e;
+            --ink-soft: #54545c;
+            --line: #e6e5e0;
+            --accent: #1f7a54;
+            --accent-soft: #e7f2ec;
+            --code: #f2f1ec;
+        }
+
+        :root[data-theme="dark"] {
+            --bg: #0f0f11;
+            --surface: #17171a;
+            --ink: #ececef;
+            --ink-soft: #a2a2ac;
+            --line: #2a2a2f;
+            --accent: #54c98d;
+            --accent-soft: #16241d;
+            --code: #1e1e22;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+            line-height: 1.85;
+            font-size: 16.5px;
+            letter-spacing: .01em;
+        }
+
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: clamp(28px, 6vw, 64px) clamp(20px, 5vw, 32px) 96px
+        }
+
+        header {
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 28px;
+            margin-bottom: 8px
+        }
+
+        .eyebrow {
+            font-size: .78rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin: 0 0 10px
+        }
+
+        h1 {
+            font-size: clamp(1.7rem, 5vw, 2.3rem);
+            line-height: 1.3;
+            margin: 0 0 14px;
+            letter-spacing: .01em;
+            text-wrap: balance
+        }
+
+        .meta {
+            color: var(--ink-soft);
+            font-size: .92rem;
+            margin: 0
+        }
+
+        .lead {
+            color: var(--ink-soft);
+            font-size: 1.02rem;
+            margin: 26px 0 6px
+        }
+
+        h2 {
+            font-size: 1.18rem;
+            margin: 44px 0 12px;
+            padding-top: 6px;
+            color: var(--ink);
+            letter-spacing: .02em
+        }
+
+        h2 .num {
+            color: var(--accent);
+            font-variant-numeric: tabular-nums;
+            margin-right: .5em;
+            font-weight: 800
+        }
+
+        h3 {
+            font-size: 1.02rem;
+            margin: 24px 0 6px;
+            color: var(--ink)
+        }
+
+        p {
+            margin: 12px 0
+        }
+
+        a {
+            color: var(--accent);
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px
+        }
+
+        ul {
+            margin: 12px 0;
+            padding-left: 1.25em
+        }
+
+        li {
+            margin: 8px 0
+        }
+
+        strong {
+            font-weight: 700
+        }
+
+        .ph {
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 5px;
+            padding: 1px 7px;
+            font-weight: 700;
+            font-size: .9em;
+            white-space: nowrap
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin: 18px 0
+        }
+
+        .card h3 {
+            margin-top: 0
+        }
+
+        .kv {
+            color: var(--ink-soft);
+            font-size: .95rem
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            font-size: .95rem
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top
+        }
+
+        th {
+            color: var(--ink-soft);
+            font-weight: 600;
+            white-space: nowrap
+        }
+
+        .note {
+            background: var(--code);
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: .92rem;
+            color: var(--ink-soft);
+            margin: 20px 0
+        }
+
+        footer {
+            margin-top: 56px;
+            padding-top: 22px;
+            border-top: 1px solid var(--line);
+            color: var(--ink-soft);
+            font-size: .88rem
+        }
+
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin: 28px 0
+        }
+
+        .toc ol {
+            margin: 8px 0 0;
+            padding-left: 1.3em
+        }
+
+        .toc a {
+            text-decoration: none
+        }
+
+        .toc li {
+            margin: 5px 0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <p class="eyebrow">Privacy Policy</p>
+            <h1>WOD Logger プライバシーポリシー</h1>
+            <p class="meta">施行日：2026年7月24日 ／ <a href="en/">English</a></p>
+        </header>
+
+        <p class="lead">
+            Okawa Shohei（以下「当方」）は、iOS アプリ「WOD Logger」（以下「本アプリ」）における
+            利用者の情報の取り扱いについて、本プライバシーポリシー（以下「本ポリシー」）のとおり定めます。
+            本アプリは<strong>広告・行動トラッキング・アカウント登録を一切行いません</strong>。
+        </p>
+
+        <div class="toc" aria-label="目次">
+            <strong>目次</strong>
+            <ol>
+                <li><a href="#collect">取得・利用する情報</a></li>
+                <li><a href="#third">第三者サービス（委託先）</a></li>
+                <li><a href="#retention">保存期間</a></li>
+                <li><a href="#notdo">当方が行わないこと</a></li>
+                <li><a href="#children">お子様のプライバシー</a></li>
+                <li><a href="#rights">利用者の権利・お問い合わせ</a></li>
+                <li><a href="#changes">本ポリシーの変更</a></li>
+                <li><a href="#law">準拠法</a></li>
+            </ol>
+        </div>
+
+        <h2 id="collect"><span class="num">1</span>取得・利用する情報</h2>
+        <p>本アプリは、サービスの提供に必要な最小限の情報のみを取り扱います。</p>
+
+        <div class="card">
+            <h3>撮影した写真（OCR 機能を使う場合のみ）</h3>
+            <p>
+                ワークアウトのボード等を撮影して自動入力する機能を使う場合、その画像は当方のサーバー（Cloudflare Workers）を経由して
+                AI 解析サービス（Anthropic）へ送信され、テキスト抽出のためだけに利用されます。
+                <strong>画像は解析後ただちに破棄し、サーバーに保存・記録しません。</strong>
+                OCR 機能を使わなければ画像が送信されることはありません。
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>端末認証情報（App Attest）</h3>
+            <p>
+                OCR 機能の不正利用を防ぐため、Apple の App Attest（端末の正当性証明）を利用します。
+                当方のサーバーには端末ごとの公開鍵と利用回数カウンタのみを保存します。これは特定の個人を識別する情報ではありません。
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>iCloud 識別子（無料枠の管理）</h3>
+            <p>
+                無料枠の月間利用回数を数えるために、利用者の iCloud アカウントに紐づく識別子を用います。
+                当方はこの識別子と月間の利用回数を保存しますが、氏名・メールアドレス等の連絡先は取得しません。
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>購読（サブスクリプション）情報</h3>
+            <p>
+                有料プランに登録された場合、購入は Apple（App Store）を通じて行われ、購読の有効性を確認するために、
+                Apple から提供される取引識別子（originalTransactionId）と有効期限を当方のサーバーに保存します。
+                クレジットカード番号等の決済情報を当方が取得・保持することはありません。
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>トレーニング記録（あなたのデータ）</h3>
+            <p>
+                入力・記録したワークアウトの内容は、<strong>お使いの端末</strong>および<strong>利用者ご自身の iCloud
+                    （Apple の CloudKit）</strong>に保存され、同一 Apple ID の端末間で同期されます。
+                これらのデータは利用者の管理下にあり、<strong>当方が閲覧・取得することはありません。</strong>
+            </p>
+        </div>
+
+        <h2 id="third"><span class="num">2</span>第三者サービス（委託先）</h2>
+        <p>本アプリの提供にあたり、以下の外部サービスを利用します。各社の取り扱いは各社のプライバシーポリシーに従います。</p>
+        <table>
+            <tr>
+                <th>サービス</th>
+                <th>目的</th>
+            </tr>
+            <tr>
+                <td>Anthropic</td>
+                <td>撮影画像からのテキスト抽出（AI 解析）。画像は保存されません。<br><a href="https://www.anthropic.com/legal/privacy"
+                        target="_blank" rel="noopener">privacy policy</a></td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>App Attest（端末認証）・iCloud 同期・App Store 決済。<br><a href="https://www.apple.com/legal/privacy/"
+                        target="_blank" rel="noopener">privacy policy</a></td>
+            </tr>
+            <tr>
+                <td>Cloudflare</td>
+                <td>サーバー（API）の稼働基盤。<br><a href="https://www.cloudflare.com/privacypolicy/" target="_blank"
+                        rel="noopener">privacy policy</a></td>
+            </tr>
+        </table>
+
+        <h2 id="retention"><span class="num">3</span>保存期間</h2>
+        <ul>
+            <li><strong>撮影画像</strong>：解析後ただちに破棄（保存しません）。</li>
+            <li><strong>端末認証・無料枠カウンタ・購読情報</strong>：サービス提供に必要な期間、当方サーバーに保存します。</li>
+            <li><strong>トレーニング記録</strong>：利用者の端末および iCloud に保存され、利用者が削除するまで保持されます（当方は保持しません）。</li>
+        </ul>
+
+        <h2 id="notdo"><span class="num">4</span>当方が行わないこと</h2>
+        <ul>
+            <li>広告の配信・第三者による行動トラッキングを行いません（トラッキング用の SDK を組み込んでいません）。</li>
+            <li>アカウント登録・ログインを求めません。</li>
+            <li>取得した情報を第三者に販売・貸与しません。</li>
+        </ul>
+
+        <h2 id="children"><span class="num">5</span>お子様のプライバシー</h2>
+        <p>
+            本アプリは子ども向けに設計されたものではなく、13 歳未満の子どもから意図的に情報を収集することはありません。
+        </p>
+
+        <h2 id="rights"><span class="num">6</span>利用者の権利・お問い合わせ</h2>
+        <p>
+            本ポリシーに関するご質問、またはご自身に関する情報の確認・削除等のご希望は、下記までご連絡ください。
+            トレーニング記録はアプリ内および iCloud 設定から利用者ご自身で削除できます。
+        </p>
+        <p class="kv">お問い合わせ先：<a href="mailto:wodlogger.support@gmail.com">wodlogger.support@gmail.com</a></p>
+
+        <h2 id="changes"><span class="num">7</span>本ポリシーの変更</h2>
+        <p>
+            本ポリシーは、法令の変更やサービス内容の変更に応じて改定することがあります。
+            重要な変更を行う場合は、本ページの更新により周知します。
+        </p>
+
+        <h2 id="law"><span class="num">8</span>準拠法</h2>
+        <p>本ポリシーは日本法に準拠して解釈されます。</p>
+
+        <footer>
+            <p>WOD Logger — 最終更新：2026年7月24日</p>
+        </footer>
+    </div>
+</body>
+
+</html>
