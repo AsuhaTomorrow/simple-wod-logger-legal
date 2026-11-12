@@ -9,6 +9,8 @@ iOS アプリ **WOD Logger** の法務関連ページを GitHub Pages で配信�
 | 目次 | https://asuhatomorrow.github.io/simple-wod-logger-legal/ |
 | プライバシーポリシー（日本語） | https://asuhatomorrow.github.io/simple-wod-logger-legal/privacy/ |
 | Privacy Policy (English) | https://asuhatomorrow.github.io/simple-wod-logger-legal/privacy/en/ |
+| サポート（日本語） | https://asuhatomorrow.github.io/simple-wod-logger-legal/support/ |
+| Support (English) | https://asuhatomorrow.github.io/simple-wod-logger-legal/support/en/ |
 
 プライバシーポリシー（日本語）の URL は App Store Connect およびアプリの
 `App/Info.plist`（`LegalPrivacyPolicyURL`）に登録される。**パスを変更すると出荷済みビルドのリンクが切れる**ため、
@@ -20,6 +22,8 @@ iOS アプリ **WOD Logger** の法務関連ページを GitHub Pages で配信�
 index.html            目次
 privacy/index.html    プライバシーポリシー（日本語）
 privacy/en/index.html Privacy Policy (English)
+support/index.html    サポート（日本語）
+support/en/index.html Support (English)
 .nojekyll             Jekyll 処理をバイパス
 ```
 
